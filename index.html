@@ -9,19 +9,38 @@
     <title>Document</title>
 </head>
 
-<body>
+<school>
     <script>
         //Task 1
-        let temperature = 123;
-        console.log(temperature);
-        let result = 1.8 * temperature + 32;
-        console.log(result);
-        //Task 2
-        let name = "Polina";
-        let admin = name;
-        console.log(admin);
+        let n1 = prompt("Print n1");
+        let n2 = prompt("Print n2");
+        if (n1 <= 1 && n2 >= 3) {
+            alert("Оба числа соответствуют условию задачи");
+        }
+        else if (n1 <= 1 && n2 < 3) {
+            alert("Только первое число соответствует условию задачи");
+        }
+        else if (n1 > 1 && n2 >= 3) {
+            alert("Только второе число соответствует условию задачи");
+        }
+        else {
+            alert("Введённые вами числа не соответствуют условию");
+        }
+        //Task2
+        let test = true;
+        console.log((test == true ? "+++" : "---"));
+        //Task3
+        let day = prompt("Напишите число от 1 до 31");
+        if (day >= 1 && day <= 11) {
+            alert("1-ая декада");
+        }
+        if (day > 11 && day <= 22) {
+            alert("2-ая декада");
+        }
+        if (day > 22 && day <= 31) {
+            alert("3-я декада");
+        }
     </script>
-    <script src="../JavaScript/script.js"></script>
-</body>
+    </body>
 
 </html>
