@@ -11,34 +11,59 @@
 
 <school>
     <script>
-        //Task 1
-        let n1 = prompt("Print n1");
-        let n2 = prompt("Print n2");
-        if (n1 <= 1 && n2 >= 3) {
-            alert("Оба числа соответствуют условию задачи");
+        //Task1
+        function Math(a) {
+            return a ** 3;
         }
-        else if (n1 <= 1 && n2 < 3) {
-            alert("Только первое число соответствует условию задачи");
-        }
-        else if (n1 > 1 && n2 >= 3) {
-            alert("Только второе число соответствует условию задачи");
-        }
-        else {
-            alert("Введённые вами числа не соответствуют условию");
-        }
+        let t = Math(2);
+        let l = Math(3);
+        console.log(t + l);
         //Task2
-        let test = true;
-        console.log((test == true ? "+++" : "---"));
+        let p = +prompt("Введите число: ");
+        function Money(w) {
+            console.log(typeof (w));
+            if (isNaN(w * 0.13)) {
+                alert("Введите число, а не текст");
+            }
+            else {
+                let b = w - (w * 0.13);
+                return console.log("Зарплата с вычетом налогов: " + b);
+            }
+        }
+        Money(p);
+
         //Task3
-        let day = prompt("Напишите число от 1 до 31");
-        if (day >= 1 && day <= 11) {
-            alert("1-ая декада");
+        let one = +prompt("Введите первое число: ");
+        let two = +prompt("Введите второе число: ");
+        let three = +prompt("Введите третье число: ");
+        Max(one, two, three);
+        function Max(a, b, c) {
+            console.log(Math.max(a, b, c));
         }
-        if (day > 11 && day <= 22) {
-            alert("2-ая декада");
+
+        //Task4
+        let a = +prompt("Print first number: ");
+        let b = +prompt("Print second number: ");
+        Sum(a, b);
+        Subtraction(a, b);
+        Multiplication(a, b);
+        Division(a, b);
+        function Sum(a, b) {
+            console.log(a + b);
         }
-        if (day > 22 && day <= 31) {
-            alert("3-я декада");
+        function Subtraction(a, b) {
+            if (a === b) {
+                return 0;
+            }
+            else {
+                console.log(Math.max(a, b) - Math.min(a, b));
+            }
+        }
+        function Multiplication(a, b) {
+            console.log(a * b);
+        }
+        function Division(a, b) {
+            console.log(a / b);
         }
     </script>
     </body>
